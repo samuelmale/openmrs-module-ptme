@@ -1,77 +1,59 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>ptme</artifactId>
 		<version>1.1</version>
 	</parent>
-
 	<artifactId>ptme-omod</artifactId>
 	<packaging>jar</packaging>
 	<name>Prevent Transmission Module OMOD</name>
 	<description>OMOD project for PreventTransmission</description>
-
 	<dependencies>
-
 		<!-- 
 		Add other dependencies from parent's pom: 
-		<dependency> 
-			<groupId>org.other.library</groupId> 
-			<artifactId>library-name</artifactId> 
-		</dependency> 
+		<dependency><groupId>org.other.library</groupId><artifactId>library-name</artifactId></dependency> 
 		-->
-
 		<!-- Begin OpenMRS modules -->
-
 		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
 			<artifactId>${project.parent.artifactId}-api</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-
-
 		<!-- End OpenMRS modules -->
-
-
 		<!-- Begin OpenMRS core -->
-
 		<dependency>
 			<groupId>org.openmrs.api</groupId>
 			<artifactId>openmrs-api</artifactId>
 			<type>jar</type>
 		</dependency>
-
 		<dependency>
 			<groupId>org.openmrs.web</groupId>
 			<artifactId>openmrs-web</artifactId>
 			<type>jar</type>
 		</dependency>
-
 		<dependency>
 			<groupId>org.openmrs.api</groupId>
 			<artifactId>openmrs-api</artifactId>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.openmrs.web</groupId>
 			<artifactId>openmrs-web</artifactId>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.openmrs.test</groupId>
 			<artifactId>openmrs-test</artifactId>
 			<type>pom</type>
 			<scope>test</scope>
 		</dependency>
-
 		<!-- End OpenMRS core -->
-
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -99,7 +81,6 @@
 			<version>2.13</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>webservices.rest-omod-common</artifactId>
@@ -108,29 +89,27 @@
 			<scope>test</scope>
 		</dependency>
 		<!--<dependency>-->
-			<!--<groupId>org.openmrs.module</groupId>-->
-			<!--<artifactId>webservices.rest-omod-common</artifactId>-->
-			<!--<version>${webservicesRestVersion}</version>-->
-			<!--<type>jar</type>-->
-			<!--<scope>provided</scope>-->
+		<!--<groupId>org.openmrs.module</groupId>-->
+		<!--<artifactId>webservices.rest-omod-common</artifactId>-->
+		<!--<version>${webservicesRestVersion}</version>-->
+		<!--<type>jar</type>-->
+		<!--<scope>provided</scope>-->
 		<!--</dependency>-->
 		<!--<dependency>-->
-			<!--<groupId>org.openmrs.module</groupId>-->
-			<!--<artifactId>webservices.rest-omod-common</artifactId>-->
-			<!--<version>${webservicesRestVersion}</version>-->
-			<!--<type>test-jar</type>-->
-			<!--<scope>test</scope>-->
+		<!--<groupId>org.openmrs.module</groupId>-->
+		<!--<artifactId>webservices.rest-omod-common</artifactId>-->
+		<!--<version>${webservicesRestVersion}</version>-->
+		<!--<type>test-jar</type>-->
+		<!--<scope>test</scope>-->
 		<!--</dependency>-->
 		<!--<dependency>-->
-			<!--<groupId>org.openmrs.module</groupId>-->
-			<!--<artifactId>webservices.rest-omod-1.8</artifactId>-->
-			<!--<version>${webservicesRestVersion}</version>-->
-			<!--<type>jar</type>-->
-			<!--<scope>provided</scope>-->
+		<!--<groupId>org.openmrs.module</groupId>-->
+		<!--<artifactId>webservices.rest-omod-1.8</artifactId>-->
+		<!--<version>${webservicesRestVersion}</version>-->
+		<!--<type>jar</type>-->
+		<!--<scope>provided</scope>-->
 		<!--</dependency>-->
-
 	</dependencies>
-
 	<build>
 		<finalName>${project.parent.artifactId}-${project.parent.version}</finalName>
 		<resources>
@@ -155,20 +134,21 @@
 				<targetPath>web/module</targetPath>
 			</resource>
 		</resources>
-
 		<testResources>
 			<testResource>
 				<directory>src/test/resources</directory>
 				<filtering>true</filtering>
 			</testResource>
 		</testResources>
-
 		<pluginManagement>
 			<plugins>
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
 					<configuration>
 						<includeEmptyDirs>true</includeEmptyDirs>
+						<nonFilteredFileExtensions>
+							<nonFilteredFileExtension>swf</nonFilteredFileExtension>
+						</nonFilteredFileExtensions>
 					</configuration>
 				</plugin>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
@@ -212,7 +192,6 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-
 		<plugins>
 			<plugin>
 				<groupId>org.openmrs.maven.plugins</groupId>
@@ -257,5 +236,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
