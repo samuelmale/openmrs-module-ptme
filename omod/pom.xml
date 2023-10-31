@@ -1,7 +1,4 @@
-<project
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.openmrs.module</groupId>
@@ -13,10 +10,7 @@
 	<name>Prevent Transmission Module OMOD</name>
 	<description>OMOD project for PreventTransmission</description>
 	<dependencies>
-		<!-- 
-		Add other dependencies from parent's pom: 
-		<dependency><groupId>org.other.library</groupId><artifactId>library-name</artifactId></dependency> 
-		-->
+		
 		<!-- Begin OpenMRS modules -->
 		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
@@ -88,27 +82,6 @@
 			<classifier>tests</classifier>
 			<scope>test</scope>
 		</dependency>
-		<!--<dependency>-->
-		<!--<groupId>org.openmrs.module</groupId>-->
-		<!--<artifactId>webservices.rest-omod-common</artifactId>-->
-		<!--<version>${webservicesRestVersion}</version>-->
-		<!--<type>jar</type>-->
-		<!--<scope>provided</scope>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-		<!--<groupId>org.openmrs.module</groupId>-->
-		<!--<artifactId>webservices.rest-omod-common</artifactId>-->
-		<!--<version>${webservicesRestVersion}</version>-->
-		<!--<type>test-jar</type>-->
-		<!--<scope>test</scope>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-		<!--<groupId>org.openmrs.module</groupId>-->
-		<!--<artifactId>webservices.rest-omod-1.8</artifactId>-->
-		<!--<version>${webservicesRestVersion}</version>-->
-		<!--<type>jar</type>-->
-		<!--<scope>provided</scope>-->
-		<!--</dependency>-->
 	</dependencies>
 	<build>
 		<finalName>${project.parent.artifactId}-${project.parent.version}</finalName>
@@ -170,7 +143,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -183,7 +156,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>

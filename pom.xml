@@ -20,10 +20,11 @@
 		<url>http://openmrs.org</url>
 	</organization>
 	<scm>
-		<connection>scm:svn:https://svn.openmrs.org/openmrs-modules/ptme/trunk/</connection>
-		<developerConnection>scm:svn:https://svn.openmrs.org/openmrs-modules/ptme/trunk/</developerConnection>
-		<url>https://svn.openmrs.org/openmrs-modules/ptme/trunk/</url>
-	</scm>
+		<connection>scm:git:https://github.com/samuelmale/openmrs-module-ptme.git</connection>
+		<developerConnection>scm:git:https://github.com/samuelmale/openmrs-module-ptme.git</developerConnection>
+		<url>scm:git:https://github.com/samuelmale/openmrs-module-ptme.git</url>
+	  <tag>HEAD</tag>
+  </scm>
 	<modules>
 		<module>api</module>
 		<module>omod</module>
@@ -35,11 +36,6 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<!--
-			Libraries to add as dependencies with compile or runtime scope:
-			Find matching dependencies in the maven central repository.
-			<dependency><groupId>org.other.library</groupId><artifactId>library-name</artifactId><version>library.version</version><scope>compile</scope></dependency>
-			-->
 			<!-- Begin OpenMRS core -->
 			<dependency>
 				<groupId>org.openmrs.api</groupId>
@@ -165,4 +161,16 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+          <id>uwdigi-repo-central</id>
+          <name>libs-release</name>
+          <url>https://packages.uwdigi.org/artifactory/libs-release</url>
+        </repository>
+		<snapshotRepository>
+          <id>uwdigi-repo-snapshots</id>
+          <name>libs-snapshot</name>
+          <url>https://packages.uwdigi.org/artifactory/libs-snapshot</url>
+        </snapshotRepository>
+	</distributionManagement>
 </project>
