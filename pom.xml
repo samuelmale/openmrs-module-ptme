@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.openmrs.module</groupId>
 	<artifactId>ptme</artifactId>
-	<version>1.1</version>
+	<version>1.1.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Prevent Transmission Module</name>
 	<description>This Module is used to store data concerning the Prevention of Mother to Child Transmission. It will deal with the mother from the pregnancy to the birth of the Child and from the child birth to its final test conclusion.</description>
