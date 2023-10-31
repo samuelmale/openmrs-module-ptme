@@ -3,17 +3,14 @@
 	<parent>
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>ptme</artifactId>
-		<version>1.1.1</version>
+		<version>1.2.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>ptme-omod</artifactId>
 	<packaging>jar</packaging>
 	<name>Prevent Transmission Module OMOD</name>
 	<description>OMOD project for PreventTransmission</description>
 	<dependencies>
-		<!-- 
-		Add other dependencies from parent's pom: 
-		<dependency><groupId>org.other.library</groupId><artifactId>library-name</artifactId></dependency> 
-		-->
+		
 		<!-- Begin OpenMRS modules -->
 		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
