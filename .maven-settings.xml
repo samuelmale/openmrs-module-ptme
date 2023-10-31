@@ -47,7 +47,12 @@ http://maven.apache.org/xsd/settings-1.2.0.xsd"
     <server>
       <username>${env.MAVEN_REPO_USERNAME}</username>
       <password>${env.MAVEN_REPO_PASSWORD}</password>
-      <id>uwdigi.deployment</id>
+      <id>uwdigi-repo-central</id>
+    </server>
+    <server>
+      <username>${env.MAVEN_REPO_USERNAME}</username>
+      <password>${env.MAVEN_REPO_PASSWORD}</password>
+      <id>uwdigi-repo-snapshots</id>
     </server>
     <server>
       <username>${env.GITHUB_ACTOR}</username>
