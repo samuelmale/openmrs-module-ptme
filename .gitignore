@@ -14,6 +14,7 @@
 
 ### Linux ###
 .*
+!.maven-settings.xml
 !.github
 !.gitignore
 !.gitattributes
