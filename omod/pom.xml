@@ -82,6 +82,17 @@
 			<classifier>tests</classifier>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>legacyui-omod</artifactId>
+			<version>1.15.4-sigdep-SNAPSHOT</version>
+			<scope>jar</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.simpleframework</groupId>
+			<artifactId>simple-xml</artifactId>
+			<version>2.7.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.parent.artifactId}-${project.parent.version}</finalName>

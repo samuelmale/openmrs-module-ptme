@@ -2,16 +2,20 @@ package org.openmrs.module.ptme;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
-import org.openmrs.*;
 
 import javax.persistence.*;
+
+import org.openmrs.BaseOpenmrsData;
+import org.openmrs.Location;
+import org.openmrs.Patient;
+
 import java.util.Collection;
 import java.util.Date;
 
 @XStreamAlias("child")
 @Entity
 @Table(name = "ptme_child")
-public class Child extends PreventTransmissionAbstract {
+public class Child extends BaseOpenmrsData {
 
     private static final long serialVersionUID = 1L;
 

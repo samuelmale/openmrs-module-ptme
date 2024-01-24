@@ -1,5 +1,6 @@
 package org.openmrs.module.ptme;
 
+import org.openmrs.BaseOpenmrsData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,7 +9,7 @@ import java.util.Set;
 
 @Entity(name = "ReportingDataset")
 @Table(name = "ptme_reporting_dataset")
-public class ReportingDataset extends PreventTransmissionAbstract {
+public class ReportingDataset extends BaseOpenmrsData {
 
     public static final long serialVersionUID = 1L;
 

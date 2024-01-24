@@ -28,7 +28,7 @@
 		<module>omod</module>
 	</modules>
 	<properties>
-		<openMRSVersion>1.9.2</openMRSVersion>
+		<openMRSVersion>2.1.1</openMRSVersion>
 		<webservicesRestVersion>2.13</webservicesRestVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -89,6 +89,12 @@
 				<classifier>tests</classifier>
 				<scope>test</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>legacyui</artifactId>
+				<version>1.15.4-sigdep-SNAPSHOT</version>
+				<scope>provided</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>
@@ -116,6 +122,11 @@
 		</pluginManagement>
 	</build>
 	<repositories>
+		<repository>
+			<id>uwdigi-repo-central</id>
+			<name>DIGI Public Repository</name>
+			<url>https://packages.uwdigi.org/artifactory/public</url>
+		</repository>
 		<repository>
 			<id>openmrs-repo</id>
 			<name>OpenMRS Nexus Repository</name>
