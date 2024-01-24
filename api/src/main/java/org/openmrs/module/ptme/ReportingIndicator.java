@@ -1,5 +1,6 @@
 package org.openmrs.module.ptme;
 
+import org.openmrs.BaseOpenmrsData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -7,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "ptme_reporting_indicator")
-public class ReportingIndicator extends PreventTransmissionAbstract {
+public class ReportingIndicator extends BaseOpenmrsData {
 
     public static final long serialVersionUID = 1L;
 

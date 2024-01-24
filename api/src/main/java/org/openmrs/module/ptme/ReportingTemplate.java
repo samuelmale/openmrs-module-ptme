@@ -1,5 +1,6 @@
 package org.openmrs.module.ptme;
 
+import org.openmrs.BaseOpenmrsData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -7,7 +8,7 @@ import javax.persistence.*;
 
 @Entity(name = "ReportingTemplate")
 @Table(name = "ptme_reporting_template")
-public class ReportingTemplate extends PreventTransmissionAbstract {
+public class ReportingTemplate extends BaseOpenmrsData {
     public static final long serialVersionUID = 1L;
 
     private static final Logger log = LoggerFactory.getLogger(ReportingTemplate.class);

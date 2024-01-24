@@ -54,30 +54,21 @@ public class MotherFollowupManageController {
             patientInfo.put("givenName", patient.getGivenName());
             patientInfo.put("middleName", patient.getMiddleName());
 
-            List<Obs> obsList = Context.getObsService().getLastNObservations(1,
-                    patient,
-                    Context.getConceptService().getConcept(163623), false);
+            List<Obs> obsList = Helpers.getNObservations(patient, 163623, 1);
             if(obsList.size() != 0)
                 patientInfo.put("hivType", obsList.get(0).getValueCoded().getName());
 
-            obsList = Context.getObsService().getLastNObservations(1,
-                    patient,
-                    Context.getConceptService().getConcept(164500), false);
+            obsList = Helpers.getNObservations(patient, 164500, 1);
             if(obsList.size() != 0)
                 patientInfo.put("tel", obsList.get(0).getValueText());
 
-            obsList = Context.getObsService().getLastNObservations(1,
-                    patient, Context.getConceptService().getConcept(164501), false);
+            obsList = Helpers.getNObservations(patient, 164501, 1);
             if(obsList.size() != 0)
                 patientInfo.put("cel", obsList.get(0).getValueText());
-            obsList = Context.getObsService().getLastNObservations(1,
-                    patient,
-                    Context.getConceptService().getConcept(5596), false);
+            obsList = Helpers.getNObservations(patient, 5596, 1);
             if(obsList.size() != 0)
                 patientInfo.put("outcomeProbableDate", obsList.get(0).getValueDate());
-            obsList = Context.getObsService().getLastNObservations(1,
-                    patient,
-                    Context.getConceptService().getConcept(164588), false);
+            obsList = Helpers.getNObservations(patient, 164588, 1);
             if(obsList.size() != 0)
                 patientInfo.put("hivCareBeginning", obsList.get(0).getValueDate());
 

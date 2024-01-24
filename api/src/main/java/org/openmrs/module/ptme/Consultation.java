@@ -15,9 +15,8 @@ package org.openmrs.module.ptme;
 
 import java.util.Date;
 import java.util.UUID;
-
-import org.openmrs.*;
-
+import org.openmrs.Location;
+import org.openmrs.BaseOpenmrsData;
 import javax.persistence.*;
 
 /**
@@ -27,7 +26,7 @@ import javax.persistence.*;
 @Inheritance(strategy = InheritanceType.JOINED)
 //@DiscriminatorColumn(name="consultation_type")
 @Table(name = "ptme_consultation")
-public abstract class Consultation extends PreventTransmissionAbstract {
+public abstract class Consultation extends BaseOpenmrsData {
 
 	private static final long serialVersionUID = 1L;
 

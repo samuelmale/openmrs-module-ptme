@@ -1,6 +1,8 @@
 package org.openmrs.module.ptme;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+import org.openmrs.BaseOpenmrsData;
 import org.openmrs.Location;
 
 import javax.persistence.*;
@@ -9,7 +11,7 @@ import java.util.UUID;
 @XStreamAlias("hivService")
 @Entity
 @Table(name = "ptme_hiv_service")
-public class HivService extends PreventTransmissionAbstract {
+public class HivService extends BaseOpenmrsData {
 
     private static final long serialVersionUID = 1L;
 

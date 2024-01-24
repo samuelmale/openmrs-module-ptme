@@ -1,7 +1,5 @@
 package org.openmrs.module.ptme.web.controller;
 
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.*;
@@ -9,14 +7,12 @@ import org.openmrs.api.context.Context;
 import org.openmrs.module.ptme.Child;
 import org.openmrs.module.ptme.ChildFollowup;
 import org.openmrs.module.ptme.ChildFollowupVisit;
-import org.openmrs.module.ptme.SerializedData;
 import org.openmrs.module.ptme.api.PreventTransmissionService;
 import org.openmrs.module.ptme.forms.*;
 import org.openmrs.module.ptme.forms.validators.ChildFollowupFormValidator;
 import org.openmrs.module.ptme.forms.validators.ChildFormValidator;
 import org.openmrs.module.ptme.utils.ChildFollowupTransformer;
 import org.openmrs.module.ptme.utils.UsefullFunction;
-import org.openmrs.module.ptme.xml.ChildXml;
 import org.openmrs.web.WebConstants;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -51,30 +47,21 @@ public class ChildFollowupManageController {
             patientInfo.put("middleName", patient.getMiddleName());
             patientInfo.put("givenName", patient.getGivenName());
 
-            List<Obs> obsList = Context.getObsService().getLastNObservations(1,
-                    patient,
-                    Context.getConceptService().getConcept(163623), false);
+            List<Obs> obsList = Helpers.getNObservations(patient, 163623, 1);
             if(obsList.size() != 0)
                 patientInfo.put("hivType", obsList.get(0).getValueCoded().getName());
 
-            obsList = Context.getObsService().getLastNObservations(1,
-                    patient,
-                    Context.getConceptService().getConcept(164500), false);
+            obsList = Helpers.getNObservations(patient, 164500, 1);
             if(obsList.size() != 0)
                 patientInfo.put("tel", obsList.get(0).getValueText());
 
-            obsList = Context.getObsService().getLastNObservations(1,
-                    patient, Context.getConceptService().getConcept(164501), false);
+            obsList = Helpers.getNObservations(patient, 164501, 1);
             if(obsList.size() != 0)
                 patientInfo.put("cel", obsList.get(0).getValueText());
-            obsList = Context.getObsService().getLastNObservations(1,
-                    patient,
-                    Context.getConceptService().getConcept(5596), false);
+            obsList = Helpers.getNObservations(patient, 5596, 1);
             if(obsList.size() != 0)
                 patientInfo.put("outcomeProbableDate", obsList.get(0).getValueDate());
-            obsList = Context.getObsService().getLastNObservations(1,
-                    patient,
-                    Context.getConceptService().getConcept(164588), false);
+            obsList = Helpers.getNObservations(patient, 164588, 1);
             if(obsList.size() != 0)
                 patientInfo.put("hivCareBeginning", obsList.get(0).getValueDate());
 

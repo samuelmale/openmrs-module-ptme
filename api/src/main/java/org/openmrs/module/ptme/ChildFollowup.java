@@ -1,6 +1,8 @@
 package org.openmrs.module.ptme;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+import org.openmrs.BaseOpenmrsData;
 import org.openmrs.Location;
 
 import javax.persistence.*;
@@ -9,7 +11,7 @@ import java.util.Date;
 @XStreamAlias("childFollowup")
 @Entity
 @Table(name = "ptme_child_followup")
-public class ChildFollowup extends PreventTransmissionAbstract {
+public class ChildFollowup extends BaseOpenmrsData {
 
     private static final long serialVersionUID = 1L;
 

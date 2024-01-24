@@ -1,5 +1,6 @@
 package org.openmrs.module.ptme;
 
+import org.openmrs.BaseOpenmrsData;
 import org.openmrs.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +10,7 @@ import java.util.Date;
 
 @Entity(name = "ReportingReportGeneration")
 @Table(name = "ptme_reporting_report_generation")
-public class ReportingReportGeneration extends PreventTransmissionAbstract {
+public class ReportingReportGeneration extends BaseOpenmrsData {
     public static final long serialVersionUID = 1L;
 
     private static final Logger log = LoggerFactory.getLogger(ReportingReportGeneration.class);
