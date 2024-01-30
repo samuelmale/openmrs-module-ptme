@@ -18,6 +18,8 @@
 !.github
 !.gitignore
 !.gitattributes
+!.gitpod.yml
+!.gitpod.Dockerfile
 *~
 #############
 
